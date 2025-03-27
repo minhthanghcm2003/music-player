@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="./asset/icon/" />
+  </head>
+  <body>
+    <div class="player">
+      <div class="dashboard">
+        <!-- Header -->
+        <section class="header">
+          <h4>Now PLaying</h4>
+          <h2>Name song</h2>
+        </section>
+
+        <!-- CD player -->
+        <div class="cd">
+          <div
+            class="cd-thumb"
+            style="background-image: url('./asset/img/song1.jpg')"
+          ></div>
+        </div>
+        <!-- control -->
+        <div class="control">
+          <div class="btn btn-repeat">
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+          </div>
+          <div class="btn btn-prev">
+            <i class="fa-solid fa-backward-fast"></i>
+          </div>
+          <div class="btn btn-toggle-play">
+            <i class="fa-solid fa-play icon-pause"></i>
+            <i class="fa-solid fa-pause icon-play"></i>
+          </div>
+          <div class="btn btn-next">
+            <i class="fa-solid fa-forward-fast"></i>
+          </div>
+          <div class="btn btn-random">
+            <i class="fa-solid fa-shuffle"></i>
+          </div>
+        </div>
+
+        <input
+          name="progress"
+          id="progress"
+          class="progress"
+          type="range"
+          value="0"
+          step="1"
+          min="0"
+          max="100"
+        />
+        <div class="form-element">
+          <div id="rangeValue">50</div>
+          <input type="range" id="volumeSlider" min="0" max="100" step="1" />
+        </div>
+
+        <audio src="" id="audio"></audio>
+      </div>
+      <!-- Playlist -->
+      <div class="playlist"></div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #ebebeb;
+}
+.player {
+  position: relative;
+  padding: 20px;
+  max-width: 380px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.player .icon-pause {
+  display: none;
+}
+.player.playing .icon-pause {
+  display: inline-block;
+}
+.player.playing .icon-play {
+  display: none;
+}
+.dashboard {
+  padding: 20px;
+  background-color: #c5c5c5;
+  width: 340px;
+  max-width: 380px;
+  border-radius: 10px;
+  top: 0;
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+}
+.header h4 {
+  color: #d63384;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.header h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.cd {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+.cd-thumb {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Control */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s;
+}
+.control .btn.active {
+  color: #ff0000;
+}
+.btn:hover {
+  color: #d63384;
+}
+
+.btn--toggle-play i {
+  font-size: 24px;
+}
+
+.progress {
+  width: 100%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+/* playlist */
+.playlist {
+  margin-top: 300px;
+  position: relative;
+  padding: 12px;
+}
+.song-container {
+  position: relative;
+  left: -12px;
+  border-radius: 8px;
+  display: flex;
+  background-color: #ffe1fbe8;
+  margin-bottom: 5px;
+  width: 340px;
+  padding: 10px;
+}
+.song-container.active {
+  background-color: #d63384;
+}
+.song-container.active .body .title,
+.song-container.active .option {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.song-container.active .body .author {
+  color: #333;
+}
+.song-container:active {
+  opacity: 0.8;
+}
+.thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.body {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.author {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+.option {
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.form-element {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.form-element #rangeValue {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #ddd;
+  margin-right: 10px;
+}
+
+.form-element input[type="range"] {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 6px;
+  border-radius: 10px;
+  background: #aaa;
+  outline: none;
+  overflow: hidden;
+}
+
+.form-element input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px; /* Kích thước tay cầm nhỏ */
+  height: 12px; /* Kích thước tay cầm nhỏ */
+  background: #f5f5f5;
+  border-radius: 50%; /* Hình tròn cho tay cầm */
+  box-shadow: -350px 0px 0px 340px #f5f5f5; /* Hiệu ứng của tay cầm */
+  cursor: pointer;
+}
+
+.form-element input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  box-shadow: -350px 0px 0px 340px #f5f5f5;
+  cursor: pointer;
+}
